@@ -10,6 +10,22 @@ import utils.BaseTest;
 
 public class CssSelectorsExample extends BaseTest{
 	
+	//<ul id="menu_user" qa_auto='' class="menu_user_nav" name="menu_list" type="list"></ul>
+	
+	
+	// selenium : id, className, linkText, partialLinkText, name, tagName
+	//driver.findElement(By.id('menu_user'))
+	//driver.findElement(By.className('menu_user_nav'))
+	
+	//selenium : xpath , cssSelector
+	// --> xpath //ul[@id='menu_user']
+	// --> xpath //ul[@type='list']
+	// --> xpath //ul[@class='menu_user_nav']
+	// --> xpath //ul[contains(@class,'menu_user_nav' )]
+	//---------------------------------------
+	// --> cssSelector  ul[id=menu_user]
+	// --> cssSelector ul[type=list]
+	// --> ul[qa_auto='dada']
 	//@Test
 	public void testCssSelectors() {
 		
@@ -48,6 +64,15 @@ public class CssSelectorsExample extends BaseTest{
 		System.out.println(inspireText.getText());
 		jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid red;')", inspireText);
 		
+		// <div class="column-1_2 sc_column_item sc_column_item_2 even">
+		// div[class="column-1_2 sc_column_item sc_column_item_2 even"]
+		/*
+		 * 
+		 * CONTAINS:
+		 * CSS :   div[class*='column-1_2']   
+		 * XPATH:  //div[contains(@class, 'column-1_2')]
+		 * 
+		 */
 	}
 	
 	@Test

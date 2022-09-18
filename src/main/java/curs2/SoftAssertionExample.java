@@ -11,7 +11,7 @@ public class SoftAssertionExample {
 	// 1. SoftAssertion
 	// 2. HardAssertion
 	
-	//@Test
+	@Test
 	public void softAssertion() {
 		
 		System.out.println("SoftAssertion incepe aici!");
@@ -23,7 +23,7 @@ public class SoftAssertionExample {
 		sa.assertAll();
 	}
 	
-	@Test
+	//@Test
 	public void hardAssertion() {
 		
 		System.out.println("HardAssertion incepe aici!");

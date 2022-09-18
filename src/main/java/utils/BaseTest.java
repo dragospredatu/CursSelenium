@@ -16,9 +16,9 @@ public class BaseTest {
 	public void setup() {
 		driver = WebDriverManager.chromedriver().create();
 		driver.manage().window().maximize();
-		//driver.get("http://keybooks.ro");
+		driver.get("http://keybooks.ro");
 		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-		driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
+		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
 	}
 	
 	@AfterClass

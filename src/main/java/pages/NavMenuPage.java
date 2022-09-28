@@ -22,7 +22,12 @@ public class NavMenuPage {
 	public void navigateTo(By locator) {
 		
 		driver.findElement(locator).click();
+	}
+	
+	public ShopPage navigateToShop() {
 		
+		driver.findElement(shopLink).click();
+		return new ShopPage(driver);
 	}
 
 }

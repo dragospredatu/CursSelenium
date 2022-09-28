@@ -10,11 +10,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.NavMenuPage;
 
 public class BaseTest {
 	
 	public WebDriver driver;
 	public JavascriptExecutor jse;
+	public NavMenuPage navMenu;
 	
 	@BeforeClass
 	public void setup() {
@@ -30,6 +32,7 @@ public class BaseTest {
 		
 		// comensatriu pentru conflict
 		jse = (JavascriptExecutor) driver;
+		navMenu = new NavMenuPage(driver);
 	}
 	
 	@AfterClass

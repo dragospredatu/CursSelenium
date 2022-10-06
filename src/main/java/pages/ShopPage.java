@@ -15,7 +15,9 @@ public class ShopPage {
 		this.driver = driver;
 	}
 	
+	//locators
 	public By orderDropdown = By.name("orderby");
+	public By bookNewGalaxy = By.xpath("//div[@class='post_content']//a[contains(@href, 'new-galaxy')]");
 	
 	public void selectByValue(String value) {
 		
@@ -43,5 +45,10 @@ public class ShopPage {
 		dropdown = driver.findElement(orderDropdown);
 		select = new Select(dropdown);
 		return select.getFirstSelectedOption().getText();
+	}
+	
+	public void navigateTo(By locator) {
+		
+		driver.findElement(locator).click();
 	}
 }

@@ -26,7 +26,7 @@ public class DropdownTest extends BaseTest{
 		assertEquals(shopPage.getSelectedOption(), "Sort by price: low to high");
 	}
 	
-	//@Test(priority = 2)
+	@Test(groups = "ProductFunctionality")
 	public void selectByVisibleTextTest() {
 		
 		NavMenuPage navMenu = new NavMenuPage(driver);
@@ -37,7 +37,7 @@ public class DropdownTest extends BaseTest{
 		assertEquals(shopPage.getSelectedOption(), "Sort by popularity");
 	}
 	
-	//@Test(priority = 3)
+	@Test(groups = "ProductFunctionality")
 	public void selectByIndex() {
 		
 		NavMenuPage navMenu = new NavMenuPage(driver);

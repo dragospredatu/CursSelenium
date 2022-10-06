@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.NavMenuPage;
@@ -18,13 +19,15 @@ public class BaseTest {
 	public JavascriptExecutor jse;
 	public NavMenuPage navMenu;
 	
-	@BeforeClass
+	//@Parameters({"url"})
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		
 		driver = WebDriverManager.chromedriver().create();
 		driver.manage().window().maximize();
 		//implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.get(url);
 		driver.get("http://keybooks.ro");
 		//driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
@@ -35,7 +38,7 @@ public class BaseTest {
 		navMenu = new NavMenuPage(driver);
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void teardown() throws InterruptedException {
 		
 		Thread.sleep(4000);

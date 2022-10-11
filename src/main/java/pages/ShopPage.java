@@ -18,6 +18,8 @@ public class ShopPage {
 	//locators
 	public By orderDropdown = By.name("orderby");
 	public By bookNewGalaxy = By.xpath("//div[@class='post_content']//a[contains(@href, 'new-galaxy')]");
+	public By cheapestBook = By.xpath("//ul[@class='products columns-4']//li[1]//span[@class='woocommerce-Price-amount amount']");
+	public By mostExpensiveBook = By.xpath("//ul[@class='products columns-4']//li[last()]//span[@class='woocommerce-Price-amount amount']");
 	
 	public void selectByValue(String value) {
 		

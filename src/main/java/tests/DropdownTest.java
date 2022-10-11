@@ -1,6 +1,7 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -63,5 +64,14 @@ public class DropdownTest extends BaseTest{
 		select2.selectByVisibleText("Sort by latest");
 	}
 	
-	
+	@Test
+	public void checkPricesAfterSorting() {
+		
+		ShopPage shopPage = navMenu.navigateToShop();
+		shopPage.selectByValue("price");
+		assertEquals(shopPage.getSelectedOption(), "Sort by price: low to high");
+		double cheapestBookPrice = Double.parseDouble(driver.findElement(shopPage.cheapestBook).getText().substring(1));
+		double mostExpensiveBookPrice = Double.parseDouble(driver.findElement(shopPage.mostExpensiveBook).getText().substring(1));
+		assertTrue(cheapestBookPrice < mostExpensiveBookPrice, "The price ordering is not correct!");
+	}
 }

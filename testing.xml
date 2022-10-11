@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="HomeworkCurs13" >
+    <test name="TestSorting" >
+        <classes>
+            <class name="tests.DropdownTest">
+            <methods>
+            	<include name = "checkPricesAfterSorting"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

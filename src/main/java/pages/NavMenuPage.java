@@ -8,12 +8,10 @@ public class NavMenuPage {
 	public WebDriver driver;
 	
 	public NavMenuPage(WebDriver driver) {
-		
 		this.driver = driver;
-		
 	}
 	
-	//locatori
+	//Locators
 	public By shopLink = By.linkText("BOOKS");
 	public By loginLink = By.linkText("Login");
 	public By contactLink = By.linkText("CONTACTS");
@@ -21,6 +19,7 @@ public class NavMenuPage {
 	public By blogLink = By.linkText("BLOG");
 	public By blogClassicLink = By.linkText("Classic");
 	
+	//Methods
 	public void navigateTo(By locator) {
 		
 		driver.findElement(locator).click();

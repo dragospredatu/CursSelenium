@@ -68,5 +68,17 @@ public class SeleniumWrappers {
 		//action.clickAndHold(element).moveByOffset(300, 0).release().build().perform();
 		//action.sendKeys(Keys.TAB).click().sendKeys(Keys.TAB).sendKeys(Keys.TAB).perform();
 	}
+	
+	public void hoverElement(By locator) {
+		
+		WebElement element = driver.findElement(locator);
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
+	}
+	
+	public String readUrl() {
+		
+		return driver.getCurrentUrl();
+	}
 
 }

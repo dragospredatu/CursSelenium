@@ -4,12 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ContactsPage {
+import utils.SeleniumWrappers;
+
+public class ContactsPage extends SeleniumWrappers{
 	
-	public WebDriver driver;
+	//public WebDriver driver;
 	
 	public ContactsPage(WebDriver driver) {
-		this.driver = driver;
+		//this.driver = driver;
+		super(driver);
 	}
 	
 	//Inputs

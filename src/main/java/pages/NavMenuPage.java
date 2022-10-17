@@ -28,6 +28,8 @@ public class NavMenuPage extends SeleniumWrappers{
 	public By singleAuthorLink = By.linkText("SINGLE AUTHOR");
 	public By blogLink = By.linkText("BLOG");
 	public By blogClassicLink = By.linkText("Classic");
+	public By aboutLink = By.linkText("ABOUT");
+	public By postFormatsBlogLink = By.linkText("Post Formats");
 	
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchField = By.cssSelector("input[class='search_field']");

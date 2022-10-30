@@ -28,7 +28,7 @@ public class ActionClassExample extends BaseTest{
 		shop.dragAndDrop(shop.sliderFinalPosition, -100, 0);
 	}
 	
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void hoverElement() throws InterruptedException {
 		
 		//NavMenuPage menu = new NavMenuPage(driver);
@@ -53,7 +53,7 @@ public class ActionClassExample extends BaseTest{
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void sendKeysExample2() throws InterruptedException {
 		
 		app.menu.navigateTo(app.menu.contactLink);
@@ -74,7 +74,7 @@ public class ActionClassExample extends BaseTest{
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void offSetExample() {
 		
 		WebElement nameElement = driver.findElement(app.contactPage.nameField);

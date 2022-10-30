@@ -7,7 +7,7 @@ import utils.BaseTest;
 public class AudioPostTest extends BaseTest{
 	
 	@Test
-	public void audioPostTest() throws InterruptedException {
+	public void audioPostTest(){
 		
 		app.menu.hoverElement(app.menu.blogLink);
 		app.menu.hoverElement(app.menu.postFormatsBlogLink);

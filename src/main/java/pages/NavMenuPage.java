@@ -7,9 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-
 import utils.SeleniumWrappers;
 
 public class NavMenuPage extends SeleniumWrappers{
@@ -30,6 +27,8 @@ public class NavMenuPage extends SeleniumWrappers{
 	public By blogClassicLink = By.linkText("Classic");
 	public By aboutLink = By.linkText("ABOUT");
 	public By postFormatsBlogLink = By.linkText("Post Formats");
+	public By portfolioBlogLink = By.linkText("Portfolio");
+	public By portfolio2ColumnsBlogLink = By.linkText("Portfolio 2 columns");
 	
 	public By searchIcon = By.cssSelector("button[class*='search_submit']");
 	public By searchField = By.cssSelector("input[class='search_field']");

@@ -34,7 +34,7 @@ public class BaseTest {
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 		//driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
 		
-		// comensatriu pentru conflict
+		//comentariu pentru conflict
 		jse = (JavascriptExecutor) driver;
 		//navMenu = new NavMenuPage(driver);
 		app = new BasePage();
